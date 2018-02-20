@@ -35,7 +35,7 @@ class Student
     # binding.pry
     DB[:conn].execute(saved, self.name, self.grade)
     last = DB[:conn].last_insert_row_id
-    binding.pry
+    #binding.pry
     @id = DB[:conn].execute("SELECT ? FROM students", last)[0][0]
     
   end
